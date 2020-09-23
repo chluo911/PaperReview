@@ -152,6 +152,84 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/22/Do-Cookie-Banners-Respect-my-Choice/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LCH">
+      <meta itemprop="description" content="paper review...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LCH's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/22/Do-Cookie-Banners-Respect-my-Choice/" class="post-title-link" itemprop="url">Do Cookie Banners Respect my Choice?</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-09-22 12:29:00" itemprop="dateCreated datePublished" datetime="2020-09-22T12:29:00+08:00">2020-09-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-09-23 12:01:51" itemprop="dateModified" datetime="2020-09-23T12:01:51+08:00">2020-09-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web-measurement/" itemprop="url" rel="index"><span itemprop="name">Web measurement</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Advertising companies profit from collecting a vast amount of data associated to the users. To protect user’s privacy, GDPR changed the rules of data collection and ePD made it mandatory to collect user’s consent before any access or storage of non-mandatory data. In websites, the consent is presented in the form of cookie banners. Cookie banner informs the user of data collection and provides a choice on whether to accept or reject such collection. This paper investigates thousands of popular websites and discoveries the inconsistence between the interface of the banners shown to the users and the actual consent that banners store and transmit to the third parties present on the website.</p>
+<p>Firstly, the authors study authoritative legal documents of privacy and data protection law, then identify four potentially legal violations specific to cookie banners. 1) Consent stored before choice: The CMP stores a positive consent before the user has made their choice in the banner; 2) No way to opt out: The banner does not offer a way to refuse consent; 3) Pre-selected choices: The purposes or vendors are pre-selected; and 4) Non-respect of choice: The CMP stores a positive consent in the browser even though the user explicitly refused consent.</p>
+<p>To access the severity of legal violations, the authors then select popular websites which are reachable and have a TCF Cookie Banner implemented, they manipulate websites to detect the four identified legal violations with different methods: 1) Consent stored before choice: Log consent strings without performing any user action. 2) No way to opt out: Click on every button and link to verify whether they lead to a second layer of the banner in which we can refuse consent. 3) Pre-selected choices: Check If a website has a &quot;parameters” option and in the &quot;parameters” page there is at least one pre-selected checkbox. 4) Non-respect of choice: Manually refuses consent on the cookie banners and log consent strings. They read consents strings to get the results of manipulating.</p>
+<p>To read consents strings, they intercept consent strings. They first study how cookies banners share consent strings to correctly intercept consent strings. Specifically, they use these methods to intercept consents: 1) Insert a script which makes a direct call to <em>__cmp</em> in the context of the crawled website. 2) Inject a script which sends a postMessage <em>__cmpCall</em> request in all third-party iframes that have the <strong>__cmpLocator</strong> iframe as a parent. 3) Read the shared cookie which are stored in <em>.consensu.org</em>. 4) Monitors all network requests which include parameter <em>gdpr_consent</em>.</p>
+<p>According to the results: Over 100 websites was found a suspected violation of <em>Consent stored before choice</em>; 38 websites offer no option to refuse consent; almost half of tested websites pre-select choices; and 27 websites register a positive consent even though the user refused consent. In addition to the data, the authors also have some interesting findings: 1) CMPs can access and reuse the share cookie which is created by external CMP, this can lead to escalation of suspected violations. 2) By logging GET and POST requests, the authors find some requests have invalid CMP IDs. 3) Refusing consent still increases the number of tracking requests, even the number of websites having the <em>non respect of choice</em> violation is not sufficient to explain this increase.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/16/RAZOR-A-Framework-for-Post-deployment-Software-Debloating/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -587,14 +665,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
   </nav>
