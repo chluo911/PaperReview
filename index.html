@@ -152,6 +152,85 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/26/Understanding-Detecting-and-Localizing-Partial-Failures-in-Large-System-Software/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LCH">
+      <meta itemprop="description" content="paper review...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LCH's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/26/Understanding-Detecting-and-Localizing-Partial-Failures-in-Large-System-Software/" class="post-title-link" itemprop="url">Understanding, Detecting and Localizing Partial Failures in Large System Software</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-09-26 20:02:48" itemprop="dateCreated datePublished" datetime="2020-09-26T20:02:48+08:00">2020-09-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-09-30 11:56:54" itemprop="dateModified" datetime="2020-09-30T11:56:54+08:00">2020-09-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/program-reduction-Partial-Failures/" itemprop="url" rel="index"><span itemprop="name">program reduction, Partial Failures</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>This paper proposes a tool to detect and localize partial failures in programs. The overall design is to derive a reduced program from main program and then test reduced program to expose potential failures.</p>
+<p>The authors first studied (reported) partial failures in real-world software systems. They find the majority of partial fails <strong>violate liveness or trigger explicit errors</strong>, which means the failures can be detected without deep semantic understanding. To detect and localize these partial failures, they proposed a tool OmegaGen to automatically generate watchdogs (reduced programs). </p>
+<p>To get a reduce program which accurately reflects the main program status, OmegaGen first finds long-running code in program P. To do this, OmegaGen identifies potentially long-running loops and then color all instructions and methods invoked in the identified loop; Next, OmegaGen locates vulnerable operations in the colored methods, using heuristics analysis, only vulnerable operations will be kept in reduced program; Finally, OmegaGen reduces the vulnerable operations based on whether they have been included already, it removes duplicated vulnerable operations in a single method to ensure there is no duplicated vulnerable operation.</p>
+<p>To make the reduced program executable. OmegaGen first defines variables for each undefined variable in reduced program, then retrieve the latest value of a variable from <strong>contexts</strong> when the variable is used. To get context information, OmegaGen implements hook which holds current program status in main program. When the context is ready and the call site of reduced method is reached in main program, OmegaGen activates the reduced method and periodically test it. The reduced program will be executed concurrently with the main program so that the execution of watchdog will not delay the main program.  To prevent side effects caused by watchdog execution, OmegaGen 1) protects intra-procedural variables from being modified by watchdog. 2) redirect I/O operation to prevent watchdog writing to storage which is accessed by main program, 3) designs an idempotent wrapper mechanism to read safety.</p>
+<p>To check partial failures in reduced program (and then infer partial failures in main program), OmegaGen add checks to monitor reduced program. To check liveness violation, OmegaGen inserts a timer and use a timeout to detect potential slow faults. To check safety violation, OmegaGen captures runtime errors and error signals and confirm impact of errors by re-run the checkers. OmegaGen cannot detect correctness violation automatically, users should provide semantic checks to help OmegaGen check correctness violation.</p>
+<p>Finally, The authors collect 22 real-world partial failures and compare OmegaGen with existing detecting tools, they evaluates OmegaGen in 1) it effectiveness in detecting partial failures. The results should OmegaGen detects more partial failures with a short time. 2) its effectiveness in generating watchdogs, how many watchdogs are generated and how many are activated in runtime. 3) strong isolation from main program. 4) its effectiveness in localizing partial failures. The author categorize distance into six levels of decreasing accuracy and find OmegaGen locates partial failures in fine-grained granularity. 5) acceptable performance and overhead.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/22/Do-Cookie-Banners-Respect-my-Choice/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -665,14 +744,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
   </nav>

@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Why binary debloating Most users don’t access to the source code. Users may use the same software in dramatically different ways, the unnecessary features also vary from users to users. Therefore, the">
+  <meta name="description" content="This paper proposes a tool to detect and localize partial failures in programs. The overall design is to derive a reduced program from main program and then test reduced program to expose potential fa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RAZOR: A Framework for Post-deployment Software Debloating">
-<meta property="og:url" content="http://yoursite.com/2020/09/16/RAZOR-A-Framework-for-Post-deployment-Software-Debloating/index.html">
+<meta property="og:title" content="Understanding, Detecting and Localizing Partial Failures in Large System Software">
+<meta property="og:url" content="http://yoursite.com/2020/09/26/Understanding-Detecting-and-Localizing-Partial-Failures-in-Large-System-Software/index.html">
 <meta property="og:site_name" content="LCH&#39;s Blog">
-<meta property="og:description" content="Why binary debloating Most users don’t access to the source code. Users may use the same software in dramatically different ways, the unnecessary features also vary from users to users. Therefore, the">
+<meta property="og:description" content="This paper proposes a tool to detect and localize partial failures in programs. The overall design is to derive a reduced program from main program and then test reduced program to expose potential fa">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-16T12:49:27.000Z">
-<meta property="article:modified_time" content="2020-09-17T09:26:42.127Z">
+<meta property="article:published_time" content="2020-09-26T12:02:48.000Z">
+<meta property="article:modified_time" content="2020-09-30T03:56:54.138Z">
 <meta property="article:author" content="LCH">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/09/16/RAZOR-A-Framework-for-Post-deployment-Software-Debloating/">
+<link rel="canonical" href="http://yoursite.com/2020/09/26/Understanding-Detecting-and-Localizing-Partial-Failures-in-Large-System-Software/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>RAZOR: A Framework for Post-deployment Software Debloating | LCH's Blog</title>
+  <title>Understanding, Detecting and Localizing Partial Failures in Large System Software | LCH's Blog</title>
   
 
 
@@ -155,7 +155,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/16/RAZOR-A-Framework-for-Post-deployment-Software-Debloating/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/26/Understanding-Detecting-and-Localizing-Partial-Failures-in-Large-System-Software/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -168,7 +168,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          RAZOR: A Framework for Post-deployment Software Debloating
+          Understanding, Detecting and Localizing Partial Failures in Large System Software
         </h1>
 
         <div class="post-meta">
@@ -178,14 +178,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-09-16 20:49:27" itemprop="dateCreated datePublished" datetime="2020-09-16T20:49:27+08:00">2020-09-16</time>
+              <time title="Created: 2020-09-26 20:02:48" itemprop="dateCreated datePublished" datetime="2020-09-26T20:02:48+08:00">2020-09-26</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-09-17 17:26:42" itemprop="dateModified" datetime="2020-09-17T17:26:42+08:00">2020-09-17</time>
+                <time title="Modified: 2020-09-30 11:56:54" itemprop="dateModified" datetime="2020-09-30T11:56:54+08:00">2020-09-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -193,11 +193,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software-debloating/" itemprop="url" rel="index"><span itemprop="name">software debloating</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/software-debloating/binary-debloating/" itemprop="url" rel="index"><span itemprop="name">binary debloating</span></a>
+                  <a href="/categories/program-reduction-Partial-Failures/" itemprop="url" rel="index"><span itemprop="name">program reduction, Partial Failures</span></a>
                 </span>
             </span>
 
@@ -212,38 +208,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Why-binary-debloating"><a href="#Why-binary-debloating" class="headerlink" title="Why binary debloating"></a>Why binary debloating</h1><ul>
-<li>Most users don’t access to the source code.</li>
-<li>Users may use the same software in dramatically different ways, the unnecessary features also vary from users to users. Therefore, the debloating process should take place after software deployment and should be tailored for each individual user.</li>
-<li>Different from dead code removal because some unused functionalities will also be removed.</li>
-</ul>
-<h1 id="How-to-debloat-binaries-and-challenges"><a href="#How-to-debloat-binaries-and-challenges" class="headerlink" title="How to debloat binaries and challenges:"></a>How to debloat binaries and challenges:</h1><ul>
-<li>users provide a set of sample inputs to demonstrate how they will use the software.</li>
-<li>modify the software binary to remove the unnecessary features while keeping the needed ones.</li>
-<li>it is challenging for end-users (even developers) to provide an input corpus that exercises all necessary code that implements a feature.  Therefore, it’s important to identify the code that is necessary to required functionalities but is not executed when processing the sample inputs, which is called related=code and meanwhile include minimal functionally unrelated code.</li>
-</ul>
-<h1 id="System-Design"><a href="#System-Design" class="headerlink" title="System Design"></a>System Design</h1><ul>
-<li>Tracer: monitors the program execution with the given sample inputs to record (1) executed instructions, including their memory addresses and raw bytes; (2) the taken or non-taken of conditional branches; (3) concrete targets of indirect jumps and calls. With these collected execution traces, RAZOR disassembles the bloated binary and constructs the partial control-ﬂow graph (CFG).</li>
-<li>PathFinder: utilizes heuristics to infer more <strong>related-code</strong> from the executed ones and expand CFG.<ul>
-<li>If the non-taken target is already in the CFG, PathFinder permits the jump from branch instruction to that non-taken target. </li>
-<li>If a new path does not include any call instructions, PathFinder includes all its instructions to the CFG.</li>
-<li>If a new path has call instructions that invoke functions within the same binary or external functions that have been executed, PathFinder include all its instructions.</li>
-<li>If a new path has call instructions that invoke external functions that have not been executed but have similar functionalities to one executed function (they manually check and group libraries’ descriptions to correlate library functions), they add all instructions in that path.</li>
-</ul>
-</li>
-<li>Generator: generates a new binary based on the output CFG of Tracer and PathFinder.<ul>
-<li>disassembles the original binary following the expanded CFG -&gt;  modifies the pseudo-assembly to create a valid assembly file -&gt;  compiles the assembly fle into an object fle -&gt; copies the machine code from the object fle into a new code section of the original binary -&gt; modifes the new code section to fIx all references to the original code and data -&gt; sets the original code section non-executable to reduce the code size.</li>
-<li>modifies the pseudo-assembly to create a valid assembly file: 1) Basic Block Symbolization, create the label L_addr for the basic block at address addr, then scan all direct jump and call instructions and replace their concrete target addresses with corresponding labels. 2) <strong>indirect call</strong>, The first method is to locate constants from the original binary that are used as code addresses and replace them with the corresponding new addresses, the second method is to perform the address translation before each indirect call. This paper takes the second approach. For local targets, they define a translation table (which is equivalent to a map) for each indirect call instruction; for global targets, they use a global translation function to find the correct module and then look up its translation table to get the correct new address to invoke. 3) if a debloated binary reach removed code or disabled branches, they redirect such attempt to a fault handler that exits the execution and dumps the call stack.</li>
-</ul>
-</li>
-</ul>
-<h1 id="Results"><a href="#Results" class="headerlink" title="Results:"></a>Results:</h1><ul>
-<li>Code reduction: On average, RAZOR achieves 68.19% code reduction for SPEC benchmarks and 78.8% code reduction for CHISEL benchmarks.</li>
-<li>Functionality: RAZOR binaries produce the same results as those from the original binaries for all test cases of all programs, showing the robustness of the debloated binaries. CHISEL, a debloating tool they use to compare with RAZOR, only passes three.</li>
-<li>Effectiveness of Path Finding: PathFinder effectively identifies related-code that completes the functionalities triggered by training inputs. They mention this aspect because finding new paths is their main contribution.</li>
-<li>Security: RAZOR removes four CVEs from the original binaries and does not introduce any new bugs. RAZOR reduces 61.9% ROP gadgets, while CHISEL reduces 85.1% ROP gadgets. RAZOR prevents attackers from corrupting function pointers because function pointers are replaced with if_else.</li>
-<li>Performance: On average, RAZOR introduces 1.70% overhead to debloated programs, indicating its efficiency for real-world deployment. </li>
-</ul>
+        <p>This paper proposes a tool to detect and localize partial failures in programs. The overall design is to derive a reduced program from main program and then test reduced program to expose potential failures.</p>
+<p>The authors first studied (reported) partial failures in real-world software systems. They find the majority of partial fails <strong>violate liveness or trigger explicit errors</strong>, which means the failures can be detected without deep semantic understanding. To detect and localize these partial failures, they proposed a tool OmegaGen to automatically generate watchdogs (reduced programs). </p>
+<p>To get a reduce program which accurately reflects the main program status, OmegaGen first finds long-running code in program P. To do this, OmegaGen identifies potentially long-running loops and then color all instructions and methods invoked in the identified loop; Next, OmegaGen locates vulnerable operations in the colored methods, using heuristics analysis, only vulnerable operations will be kept in reduced program; Finally, OmegaGen reduces the vulnerable operations based on whether they have been included already, it removes duplicated vulnerable operations in a single method to ensure there is no duplicated vulnerable operation.</p>
+<p>To make the reduced program executable. OmegaGen first defines variables for each undefined variable in reduced program, then retrieve the latest value of a variable from <strong>contexts</strong> when the variable is used. To get context information, OmegaGen implements hook which holds current program status in main program. When the context is ready and the call site of reduced method is reached in main program, OmegaGen activates the reduced method and periodically test it. The reduced program will be executed concurrently with the main program so that the execution of watchdog will not delay the main program.  To prevent side effects caused by watchdog execution, OmegaGen 1) protects intra-procedural variables from being modified by watchdog. 2) redirect I/O operation to prevent watchdog writing to storage which is accessed by main program, 3) designs an idempotent wrapper mechanism to read safety.</p>
+<p>To check partial failures in reduced program (and then infer partial failures in main program), OmegaGen add checks to monitor reduced program. To check liveness violation, OmegaGen inserts a timer and use a timeout to detect potential slow faults. To check safety violation, OmegaGen captures runtime errors and error signals and confirm impact of errors by re-run the checkers. OmegaGen cannot detect correctness violation automatically, users should provide semantic checks to help OmegaGen check correctness violation.</p>
+<p>Finally, The authors collect 22 real-world partial failures and compare OmegaGen with existing detecting tools, they evaluates OmegaGen in 1) it effectiveness in detecting partial failures. The results should OmegaGen detects more partial failures with a short time. 2) its effectiveness in generating watchdogs, how many watchdogs are generated and how many are activated in runtime. 3) strong isolation from main program. 4) its effectiveness in localizing partial failures. The author categorize distance into six levels of decreasing accuracy and find OmegaGen locates partial failures in fine-grained granularity. 5) acceptable performance and overhead.</p>
 
     </div>
 
@@ -259,13 +229,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/09/13/Everything-Old-is-New-Again-Binary-Security-of-WebAssembly/" rel="prev" title="Everything Old is New Again: Binary Security of WebAssembly">
-      <i class="fa fa-chevron-left"></i> Everything Old is New Again: Binary Security of WebAssembly
+    <a href="/2020/09/22/Do-Cookie-Banners-Respect-my-Choice/" rel="prev" title="Do Cookie Banners Respect my Choice?">
+      <i class="fa fa-chevron-left"></i> Do Cookie Banners Respect my Choice?
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/09/22/Do-Cookie-Banners-Respect-my-Choice/" rel="next" title="Do Cookie Banners Respect my Choice?">
-      Do Cookie Banners Respect my Choice? <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -324,7 +291,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Why-binary-debloating"><span class="nav-number">1.</span> <span class="nav-text">Why binary debloating</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-debloat-binaries-and-challenges"><span class="nav-number">2.</span> <span class="nav-text">How to debloat binaries and challenges:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#System-Design"><span class="nav-number">3.</span> <span class="nav-text">System Design</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Results"><span class="nav-number">4.</span> <span class="nav-text">Results:</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
